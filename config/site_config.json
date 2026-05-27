@@ -1,0 +1,9 @@
+{
+ "db_name": "YOUR_DB_NAME",
+ "db_password": "YOUR_DB_PASSWORD",
+ "db_type": "mariadb",
+ "db_user": "YOUR_DB_USER",
+ "developer_mode": 0,
+ "max_file_size": "10485760",
+ "max_request_size": "10485760"
+}

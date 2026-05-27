@@ -1,0 +1,24 @@
+[mariadb]
+# Buffer pool - 70% of available memory (assume ~4GB available)
+innodb_buffer_pool_size=3G
+
+# Connection pool
+max_connections=200
+thread_cache_size=8
+
+# Query cache (disabled in MariaDB 10.6+)
+query_cache_size=0
+
+# Slow query log
+slow_query_log=1
+long_query_time=1
+slow_query_log_file=/var/log/mysql/slow.log
+
+# Temp table
+tmp_table_size=64M
+max_heap_table_size=64M
+
+# InnoDB
+innodb_log_file_size=512M
+innodb_flush_log_at_trx_commit=2
+innodb_flush_method=O_DIRECT

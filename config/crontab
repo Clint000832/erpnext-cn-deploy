@@ -1,0 +1,5 @@
+# ERPNext daily backup at 2:00 AM
+0 2 * * * root /root/erpnext/backup.sh > /root/erpnext/logs/backup.log 2>&1
+
+# Log rotation check at 3:00 AM
+0 3 * * * root /usr/sbin/logrotate -f /root/erpnext/logrotate.conf > /root/erpnext/logs/logrotate.log 2>&1

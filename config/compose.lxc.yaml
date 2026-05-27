@@ -1,0 +1,114 @@
+services:
+  configurator:
+    security_opt:
+      - apparmor=unconfined
+
+  backend:
+    security_opt:
+      - apparmor=unconfined
+    deploy:
+      resources:
+        limits:
+          cpus: 2
+          memory: 2G
+        reservations:
+          cpus: 1
+          memory: 1G
+
+  frontend:
+    security_opt:
+      - apparmor=unconfined
+    deploy:
+      resources:
+        limits:
+          cpus: 1
+          memory: 512M
+        reservations:
+          cpus: 0.5
+          memory: 256M
+
+  websocket:
+    security_opt:
+      - apparmor=unconfined
+    deploy:
+      resources:
+        limits:
+          cpus: 1
+          memory: 512M
+        reservations:
+          cpus: 0.5
+          memory: 256M
+
+  queue-short:
+    security_opt:
+      - apparmor=unconfined
+    deploy:
+      resources:
+        limits:
+          cpus: 1
+          memory: 1G
+        reservations:
+          cpus: 0.5
+          memory: 512M
+
+  queue-long:
+    security_opt:
+      - apparmor=unconfined
+    deploy:
+      resources:
+        limits:
+          cpus: 1
+          memory: 1G
+        reservations:
+          cpus: 0.5
+          memory: 512M
+
+  scheduler:
+    security_opt:
+      - apparmor=unconfined
+    deploy:
+      resources:
+        limits:
+          cpus: 1
+          memory: 512M
+        reservations:
+          cpus: 0.5
+          memory: 256M
+
+  db:
+    security_opt:
+      - apparmor=unconfined
+    volumes:
+      - ../../mariadb-conf/tuning.cnf:/etc/mysql/conf.d/tuning.cnf:ro
+    deploy:
+      resources:
+        limits:
+          cpus: 2
+          memory: 4G
+        reservations:
+          cpus: 1
+          memory: 2G
+
+  redis-cache:
+    security_opt:
+      - apparmor=unconfined
+    deploy:
+      resources:
+        limits:
+          cpus: 1
+          memory: 256M
+        reservations:
+          cpus: 0.5
+          memory: 128M
+
+  redis-queue:
+    security_opt:
+      - apparmor=unconfined
+    deploy:
+      resources:
+        limits:
+          cpus: 1
+          memory: 256M
+        reservations:
+          cpus: 0.5
+          memory: 128M
