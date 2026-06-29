@@ -1044,4 +1044,20 @@ docker compose exec backend cat sites/erpnext.example.com/site_config.json
 | [03-运维手册.md](docs/03-运维手册.md) | 日常运维、升级、故障处理 |
 | [04-网络代理配置.md](docs/04-网络代理配置.md) | ⚠️ 中国大陆用户必读：Docker 代理配置 |
 
+### 业务操作文档
+
+日常使用 ERPNext 的操作指南在 [`docs/business-operations/`](docs/business-operations/) 目录下：
+
+| 文档 | 说明 |
+|------|------|
+| [ERPNext首次登录与基础配置.md](docs/business-operations/ERPNext首次登录与基础配置.md) | 刚装好系统后的第一步操作 |
+| [ERPNext部署指南_从零到生产.md](docs/business-operations/ERPNext部署指南_从零到生产.md) | 面向零代码基础的部署教程 |
+| [ERPNext上线清单_从准备到切换.md](docs/business-operations/ERPNext上线清单_从准备到切换.md) | 从旧系统安全切换到 ERPNext |
+| [ERPNext运维进阶与本地化指南.md](docs/business-operations/ERPNext运维进阶与本地化指南.md) | 中国本地化、性能调优 |
+| [ERPNext主机与系统维护.md](docs/business-operations/ERPNext主机与系统维护.md) | Ubuntu 系统层面维护 |
+| [ERPNext年终关账指南.md](docs/business-operations/ERPNext年终关账指南.md) | 年度关账操作流程 |
+| [ERPNext打印模板定制指南_从零到客户交付.md](docs/business-operations/ERPNext打印模板定制指南_从零到客户交付.md) | 零代码定制打印模板 |
+| [ERPNext求助指南_遇到问题怎么办.md](docs/business-operations/ERPNext求助指南_遇到问题怎么办.md) | 遇到报错去哪里找答案 |
+| [TODO.md](docs/business-operations/TODO.md) | 待办事项和规划 |
+
 > **最后说一句**：单机生产环境的核心不是性能，而是**不出问题时能安心，出问题时能快速恢复**。备份 + 恢复演练 + 资源限制，这三件事做好，已经可以应对大部分故障。
